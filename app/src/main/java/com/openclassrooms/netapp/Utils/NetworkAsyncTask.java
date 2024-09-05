@@ -5,7 +5,16 @@ import android.util.Log;
 import java.lang.ref.WeakReference;
 
 /**
- * Created by Philippe on 19/12/2017.
+ * NetworkAsyncTask est une classe personnalisée dérivée d'AsyncTask pour gérer les opérations réseau sur un thread en arrière-plan.
+ * Elle utilise une WeakReference pour éviter les fuites de mémoire en référant faiblement à l'interface Listeners,
+ * permettant ainsi à l'objet de rappel (généralement une activité ou un fragment) d'être collecté par le garbage collector si nécessaire.
+ *
+ * L'AsyncTask suit le cycle de vie typique d'une tâche asynchrone avec les méthodes onPreExecute, doInBackground et onPostExecute.
+ * - onPreExecute() est appelée avant le démarrage de la tâche en arrière-plan pour effectuer des préparations.
+ * - doInBackground() exécute la tâche principale (ici, une requête HTTP) sur un thread séparé.
+ * - onPostExecute() est appelée après la fin de la tâche pour mettre à jour l'interface utilisateur avec le résultat.
+ *
+ * Cette classe permet donc de déléguer facilement des opérations réseau sans bloquer le thread principal de l'application.
  */
 
 public class NetworkAsyncTask extends android.os.AsyncTask<String, Void, String> {

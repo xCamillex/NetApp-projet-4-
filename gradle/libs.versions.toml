@@ -19,6 +19,7 @@ runner = "1.0.2"
 rxandroidVersion = "2.0.1"
 rxjavaVersion = "2.1.7"
 swiperefreshlayout = "1.1.0"
+coordinatorlayout = "1.2.0"
 
 [libraries]
 adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version = "2.5.0" }
@@ -45,6 +46,7 @@ runner = { module = "com.android.support.test:runner", version.ref = "runner" }
 rxjava2-rxandroid = { module = "io.reactivex.rxjava2:rxandroid", version.ref = "rxandroidVersion" }
 rxjava2-rxjava = { module = "io.reactivex.rxjava2:rxjava", version.ref = "rxjavaVersion" }
 swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
+androidx-coordinatorlayout = { group = "androidx.coordinatorlayout", name = "coordinatorlayout", version.ref = "coordinatorlayout" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

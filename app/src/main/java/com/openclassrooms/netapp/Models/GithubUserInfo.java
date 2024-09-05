@@ -3,6 +3,15 @@ package com.openclassrooms.netapp.Models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+/**
+ * Représente les informations détaillées d'un utilisateur GitHub.
+ *
+ * Cette classe est utilisée pour la désérialisation des données JSON
+ * reçues de l'API GitHub concernant les utilisateurs. Elle contient des
+ * attributs qui fournissent des détails approfondis sur un utilisateur,
+ * tels que les informations personnelles, les URL de leurs ressources
+ * et leurs statistiques d'activité.
+ */
 public class GithubUserInfo {
 
     @SerializedName("login")

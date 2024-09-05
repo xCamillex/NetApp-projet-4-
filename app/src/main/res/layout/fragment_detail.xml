@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/avatar_image_view"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/username_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/username_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Username"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar_image_view" />
+
+    <TextView
+        android:id="@+id/Tv_Following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/Tv_Followers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_text_view"
+        tools:text="Following"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/Tv_Followers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toStartOf="@+id/Tv_Public_Repos"
+        app:layout_constraintStart_toEndOf="@+id/Tv_Following"
+        app:layout_constraintTop_toBottomOf="@+id/username_text_view"
+        tools:text="Followers"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/Tv_Public_Repos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Tv_Followers"
+        app:layout_constraintTop_toBottomOf="@+id/username_text_view"
+        tools:text="Public Repos"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/following_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="12"
+        app:layout_constraintEnd_toEndOf="@+id/Tv_Following"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/Tv_Following"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_Following"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/followers_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="12"
+        app:layout_constraintEnd_toEndOf="@+id/Tv_Followers"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/Tv_Followers"
+        app:layout_constraintTop_toBottomOf="@+id/Tv_Followers"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/public_repos_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="12"
+        app:layout_constraintEnd_toEndOf="@id/Tv_Public_Repos"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@id/Tv_Public_Repos"
+        app:layout_constraintTop_toBottomOf="@id/Tv_Public_Repos"
+        android:textSize="18sp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
